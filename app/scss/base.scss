@@ -1,0 +1,56 @@
+
+@import 'compass/reset';
+@import 'compass';
+
+$border-color : rgb(221, 221, 221);
+
+html, body {
+	overflow : hidden;
+}
+
+body {
+	background-color : #ffffff;
+  font-family : 'futura-pt';
+  font-weight : 300;
+  font-size : 18px;
+  text-align : center;
+}
+
+::webkit-scrollbar {
+	display : none;
+}
+
+* {
+	box-sizing : border-box;
+}
+
+div {
+	transition : all .25s ease;
+}
+
+[ng-view] {
+	width : 100%;
+	background-color : #ffffff;
+}
+
+a {
+	display : inline-block;
+	color : #000000;
+	transition : color .25s ease;
+	-webkit-tap-highlight-color : transparent;
+	&:active {
+		color : rgb(85, 85, 85);
+	}
+	&.current {
+		color :#aaaaaa;
+	}
+}
+
+hr {
+	display : block;
+  width : 100%;
+  height : 1px;
+  margin : 0px;
+  border-width : 0px;
+  background-color : $border-color;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<title>Angular + Firebase Facebook Login</title>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1'>
+		<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+		<link rel='stylesheet' href='style.css'>
+		<!-- Angular -->
+    <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js'></script>
+		<!-- Firebase -->
+    <script src='https://cdn.firebase.com/js/client/2.0.6/firebase.js'></script>
+    <!-- AngularFire -->
+    <script src='https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.js'></script>
+		<!-- Bundle -->
+		<script src='bundle.js'></script>
+		
+	</head>
+	<body ng-app='app'>
+		
+  	<div ng-controller='TheController'>
+
+			<div>Current User:</div>
+			<br>
+    	<img ng-src="{{ currentUser.profileImageURL }}">
+    	<br>
+      <div>Display Name: {{ currentUser.displayName }}</div>
+      <br>
+      <div> User ID: {{ currentUser.id }}</div>
+      <br>
+
+    	<button ng-click='login()'>
+      	Login
+      </button>
+
+      <button ng-click='logout()'>
+        Logout
+      </button>
+      
+  	</div>
+      	
+	</body>
+</html>
